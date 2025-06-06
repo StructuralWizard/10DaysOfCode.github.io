@@ -21,7 +21,7 @@ Feeling a bit lost when your **Vibe Coders** agents spit out lines of python cod
 
 
 ---
-## 1.1. 🧭 How is it explained? <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 🧭 1.1. How is it explained? <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 To cover all the basic Python concepts, let’s create a **mini text-based** game called **“Monster Maze”**. It’s fun, simple, and touches on all the listed topics.
 
@@ -29,7 +29,7 @@ You are stuck in a maze. Each turn, you decide to move through rooms, pick up it
 
 ---
 
-## 1.2. 🧠 What you will learn? <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 🧠 1.2. What you will learn? <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 | Concept                 | Covered in                                                | Use/Purpose                                 |
 | ----------------------- | --------------------------------------------------------- | ------------------------------------------- |
@@ -61,9 +61,9 @@ You are stuck in a maze. Each turn, you decide to move through rooms, pick up it
 
 ---
 
-### 🧱 1.3. Step-by-Step Coding <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 🧱 1.3. Step-by-Step Coding <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-#### 1.3.1. Import module and Comments <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 📦 1.3.1. Import module and Comments <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 The import statement in Python allows you to include and use code from other modules in your current program. For example the in code below:
 ```python
 # Simple import - access with module_name.item
@@ -74,7 +74,7 @@ random_number = random.randint(1, 10)  # Generates a random integer between 1 an
 Python searches for a module named "random" or file named random.py in several locations and executes its code once. A namespace named "random" is created in your program and then you can access the module's functions and variables. In the example the function randint is used to create a random integer number between 1 and 10. 
 In python, anything written after "#" until the end of the line is interpreted as a comment and editors generally show them in green or grey. 
 
-#### 1.3.2. Constants and Lists <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 📋 1.3.2. Constants and Lists <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 In Python, variables that are meant to remain unchanged throughout a program are often written in ALL_CAPS to indicate they are **constants**. While Python doesn't enforce this (variables can still be changed), it's a convention to signal to other programmers that these values shouldn't be modified.
 
@@ -101,7 +101,7 @@ Lists are incredibly versatile in Python:
 Later in our game, we'll select random elements from these lists using `random.choice()` to create unpredictable gameplay.
 
 
-#### 1.3.3. Global variables, Functions and Print <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 🌐 1.3.3. Global variables, Functions and Print <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 Global variables in Python are variables that are defined outside of any function and can be accessed throughout the program, including inside functions. The Global variable found_key gets the value False at the beginning of monster_maze.py
 ```python
 # Global variable
@@ -134,7 +134,7 @@ def print_welcome():
 The string written below the function with triple """ contains a 
 short documentation text named **"Docstrings"** which is used to convey the purpose and functionality of Python functions, modules, and classes.
 
-#### 1.3.4. Dictionaries and Functions with Output <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 🔑 1.3.4. Dictionaries, Lists of Dictionaries, Tuples and Slicing <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 **Dictionaries** are one of Python's most powerful data structures. They store data as key-value pairs, allowing you to retrieve values quickly using their associated keys (similar to how you look up definitions in a real dictionary). Dictionaries are created using curly braces `{}` with each key-value pair separated by commas.
 
@@ -157,6 +157,79 @@ In this dictionary:
 - You access values using their keys: `player["health"]` would give you `100`
 - Values can be modified: `player["health"] -= 20` would reduce health by 20
 
+**Lists of Dictionaries** are powerful data structures that can store multiple records with named fields. They're ideal for collections of similar objects.
+
+```python
+# List of dictionaries for multiple players
+players = [
+    {"name": "Alex", "health": 100, "inventory": ["sword"]},
+    {"name": "Taylor", "health": 80, "inventory": ["potion", "shield"]},
+    {"name": "Jordan", "health": 120, "inventory": []}
+]
+
+# Accessing data
+print(players[0]["name"])  # Output: Alex
+print(players[1]["inventory"][0])  # Output: potion
+
+# Adding new player to the list
+players.append({"name": "Casey", "health": 90, "inventory": ["map"]})
+
+# Looping through all players
+for player in players:
+    print(f"{player['name']} has {player['health']} health")
+```
+
+**Tuples** are immutable sequences similar to lists but enclosed in parentheses. Once created, their values cannot be changed.
+
+```python
+# Basic tuple creation
+coordinates = (10, 20)
+rgb_color = (255, 0, 128)
+
+# Tuple unpacking - assigns each value to a variable
+x, y = coordinates
+print(f"X: {x}, Y: {y}")  # Output: X: 10, Y: 20
+
+# Tuples can contain mixed data types
+player_data = ("Alex", 100, ["sword", "potion"])
+name, health, inventory = player_data
+
+# Tuples are immutable - this would cause an error:
+# coordinates[0] = 15
+
+# But if a tuple contains a mutable object, that object can be modified:
+player_data[2].append("shield")  # This works!
+```
+
+**Slicing** allows you to extract portions of sequences (lists, strings, tuples) using `[start:stop:step]` syntax.
+
+```python
+# Slicing a list
+items = ["sword", "shield", "potion", "key", "map"]
+first_two = items[0:2]  # ["sword", "shield"]
+last_three = items[2:]  # ["potion", "key", "map"]
+middle_items = items[1:4]  # ["shield", "potion", "key"]
+
+# Negative indices count from the end
+last_item = items[-1]  # "map"
+second_last = items[-2]  # "key"
+everything_but_last = items[:-1]  # ["sword", "shield", "potion", "key"]
+
+# Step parameter skips elements
+every_second = items[::2]  # ["sword", "potion", "map"]
+reversed_list = items[::-1]  # ["map", "key", "potion", "shield", "sword"]
+
+# Slicing strings works the same way
+name = "Monster Maze"
+first_word = name[:7]  # "Monster"
+last_word = name[8:]  # "Maze"
+reversed_name = name[::-1]  # "ezaM retsnoM"
+```
+
+Slicing is a concise and powerful way to manipulate sequences in Python, while lists of dictionaries and tuples provide flexible options for organizing complex data structures in your games.
+
+### ⚙️ 1.3.5 Functions with Input and Output <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+**Functions with Input** are functions where a variable is passed as value when they are called. This is done in our code when `game_loop(player)` is called in `main()`.
 **Functions with Output** are functions that return values to be used elsewhere in your code. In Python, the `return` statement is used to specify what value a function should output. Without a return statement, functions return `None` by default.
 
 Our `create_player()` function above is a perfect example:
@@ -167,7 +240,59 @@ Our `create_player()` function above is a perfect example:
 
 Return values are essential when a function needs to compute or create something that will be used by other parts of your program. In our game, the player dictionary is central to the entire program's state, which is why we have a dedicated function that returns it.
 
-#### 1.3.5. Conditional Statements and String Formatting <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+**Functions with unknown input** In Python, it is possible to create a function that accepts an unknown number of arguments using `*args` and `**kwargs`. Here's a breakdown of when and why we use each:
+
+`*args` (Arbitrary Positional Arguments): Used when you need to create a function that can operate on an unspecified number of inputs of the same type.
+
+How it works:
+- The *args syntax in a function definition collects all the extra positional arguments passed to the function into a tuple.
+- The name args is a convention; you could use *whatever if you wanted, but *args is widely understood and recommended.
+
+Example:
+
+```python
+def sum_all_numbers(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(sum_all_numbers(1, 2, 3))         # Output: 6
+print(sum_all_numbers(10, 20, 30, 40))  # Output: 100
+print(sum_all_numbers())                # Output: 0
+```
+
+`**kwargs` (Arbitrary Keyword Arguments): used when you want a function to accept any number of keyword arguments (arguments passed with a `key=value` syntax).
+
+How it works:
+- The `**kwargs` syntax in a function definition collects all the extra keyword arguments passed to the function into a dictionary.
+- The name kwargs is a convention; you could use `**whatever_else` but `**kwargs` is the standard.
+
+Example:
+```python
+def configure_settings(**kwargs):
+    settings = {
+        "theme": "dark",
+        "font_size": 12,
+        "language": "en"
+    }
+    for key, value in kwargs.items():
+        settings[key] = value
+    return settings
+
+print(configure_settings(theme="light", font_size=14))
+# Output: {'theme': 'light', 'font_size': 14, 'language': 'en'}
+
+print(configure_settings(language="fr", debug_mode=True))
+# Output: {'theme': 'dark', 'font_size': 12, 'language': 'fr', 'debug_mode': True}
+
+print(configure_settings())
+# Output: {'theme': 'dark', 'font_size': 12, 'language': 'en'}
+```
+You can combine `*args` and `**kwargs`, for example `def generic_printer(arg1, *args, **kwargs):`
+
+
+### 🔀 1.3.6. Conditional Statements and String Formatting <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 **Conditional Statements** (if/elif/else) are fundamental building blocks in Python that allow your program to make decisions. They execute different code blocks based on whether certain conditions are true or false. Let's look at the `describe_room()` function as an example:
 
@@ -219,7 +344,7 @@ else:
 The combination of these features makes our code both functional and readable. Notice how the function uses conditions to create dynamic gameplay (sometimes finding items, sometimes not) and formatted strings to clearly communicate what's happening to the player.
 
 
-#### 1.3.6. Range() and Logical Operators <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 🔢 1.3.7. Range() and Logical Operators <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 **The `range()` Function** is a built-in Python function that generates a sequence of numbers. It's commonly used in for loops to execute code a specific number of times. 
 
@@ -309,7 +434,7 @@ def encounter_monster(player):
                 exit() # Exits the script
 ```
 
-#### 1.3.7. While and For Loops to Control Flow. Function Recursion <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 🔄 1.3.8. While and For Loops to Control Flow. Function Recursion <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 Here is where we put the computer to properly work for us by using while and for loops to repeat actions. **While loops** execute a block of code repeatedly as long as a condition remains true. They're ideal when you don't know in advance how many iterations you'll need.
 
@@ -381,7 +506,7 @@ if choice in ["yes", "y"]:
 
 This creates a chain of function calls that continue until a terminating condition is met (finding the key or dying). Recursion is powerful but needs a clear exit condition to avoid infinite recursion.
 
-#### 1.3.8. Main Execution and Flow Diagram <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 🏃 1.3.9. Main Execution and Flow Diagram <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 **Python Script Execution** follows a specific order:
 
@@ -468,7 +593,7 @@ graph TD;
     H --> W;
 ```
 
-#### 1.3.9. Debugging <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 🐛 1.3.10. Debugging <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 **Debugging** is the process of finding and fixing errors (bugs) in your code. Common debugging techniques in Python include:
 
@@ -502,7 +627,7 @@ Good debugging practices:
 - Use descriptive print statements
 - Check edge cases (empty lists, zero values, etc.)
 
-#### 1.3.10. Refactor and Test, Code Structure and UI Polish <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+### 🔧 1.3.11. Refactor and Test, Code Structure and UI Polish <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 **Refactoring** is the process of restructuring code without changing its behavior. Benefits include:
 - Improved readability
@@ -545,7 +670,7 @@ As a final step, thorough testing ensures your code works as expected across dif
 
 ---
 
-### 🎯 1.4. Exercises <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 🎯 1.4. Exercises <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 #### 🧪 Practice 1: Custom Weapons
 > Modify the `ITEMS` list to include new weapons like "laser", "bow", or "fireball". Have the monster encounter logic recognize them.
