@@ -1,5 +1,5 @@
 ---
-title: Day 1. Python Basics 
+title: Day 1. Python Basics - Functions 
 layout: default
 nav_order: 2
 ---

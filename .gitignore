@@ -17,7 +17,8 @@ package.json
 vendor/
 
 # Ignore folders for mermaid diagrams
-.assets/
+assets/
 
 # Environment files
 .venv
+.env
