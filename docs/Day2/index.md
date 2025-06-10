@@ -1,13 +1,12 @@
 ---
-title: Day 2 Python Intermediate
+title: Day 2 Python Intermediate - Objects
 layout: default
 nav_order: 3
 ---
 
 # Day 2. Python Intermediate. 🏋️ Fitness & Diet Tracker
-
 {: .no_toc }
-In Day 1 we learnt the basic python functions that let process repetitive tasks and choices. In this lesson we will a bit more advance and powerfull modes of managing information learning how to manipulate other files, working with objects and clashes and plotting data. 
+In Day 1 we learnt the basic python functions that let process repetitive tasks and choices. Today we will a bit more advance and powerfull modes of managing information learning how to manipulate other files, working with objects and clashes and plotting data. 
 
 
 ---
@@ -23,7 +22,7 @@ In Day 1 we learnt the basic python functions that let process repetitive tasks 
 
 
 ---
-## 🧭 1.1. How is it explained? <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 🧭 How is it explained? <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 This time we are going to build a fitness and diet tracker that will calculate the net calories everyday and plot the history in a chart. This command-line tool:
 - Logs workouts and meals
@@ -32,7 +31,7 @@ This time we are going to build a fitness and diet tracker that will calculate t
 - Visualizes trends using charts
 - Uses OOP for structured code
 
-## 📦 1.2 Prerequisites, module installation and environment.<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 📦 Prerequisites, module installation and environment.<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 You will require:
 - Python 3.x
 - pandas and matplotlib
@@ -41,7 +40,7 @@ which you can install by running the command below in bash:
 pip install pandas matplotlib
 ```
 
-## 🗂 Step 1: Prepare Your Data. <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 🗂 **Step 1**: Prepare Your Data. <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 ### 👉 Understanding File Structure 📁 and Paths in Python<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
@@ -163,7 +162,7 @@ date,meal_type,food,calories
 ```
 </details>
 
-## 🐍 Step 2: Create fitness_tracker.py. **Classes** and **Object-Oriented Programming**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 🐍 **Step 2**: Create fitness_tracker.py. **Classes** and **Object-Oriented Programming**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 
 Let's dive into **Object-Oriented Programming (OOP)** with a simple analogy!
@@ -333,7 +332,7 @@ class Meal(LogEntry): # Meal inherits from LogEntry
         self.calories = calories
 ```
 
-## 📄 Step 3: Read and Clean **CSV Files**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 📄 **Step 3**: Read and Clean **CSV Files**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 ### 👉 Manual Reading with CSV Module<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 There are two main routes to load the csv file. The first one is using the module csv and load it onto a list. In doing so, we use the `strip()` and the `int()` methods. 
@@ -422,7 +421,7 @@ def load_and_clean_data():
     return df_workouts, df_meals
 ```
 
-## 📊 Step 4: **Summarize** and **Merge Data**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 📊 **Step 4**: **Summarize** and **Merge Data**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 Now is time to combine the workouts and meals using the pandas library to optain the net calories. To do that, we follow this sequence:
 
@@ -479,7 +478,7 @@ def summarize_data(df_workouts, df_meals):
 ```
 
 
-## 📈 Step 5: Visualize with **matplotlib**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 📈 **Step 5**: Visualize with **matplotlib**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 The last function that we are going to write is the one that creates the plot of the workout, meal and net calories for every registered day. To do this, we simply load the matplotlib library
 
@@ -530,7 +529,7 @@ def plot_fitness_trends(combined_df):
     plt.show() # Display the completed chart
 ```
 
-## ▶️ Step 6: Main Program<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## ▶️ **Step 6**: Main Program<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 Following best practices, we have left the main function to specify the flow of the program. This make it easier to review and to update the code. 
 
