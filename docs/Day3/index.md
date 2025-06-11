@@ -6,7 +6,7 @@ has_children: false
 nav_exclude: false
 ---
 
-# Day 3. Python Advance. 🌐 Hack your Stocks, Flights and Habits<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+# Day 3. Python Advance. 🌐 Hack your Stocks, Flights and Habits
 {: .no_toc }
 🚀 In this lesson, you’ll unlock the power of APIs, automation, and data tracking to master real-world Python skills. From monitoring markets to finding flight deals and optimizing your routines—prepare to code smarter and live better. 🌐💡
 
