@@ -6,7 +6,7 @@ has_children: false
 nav_exclude: false
 ---
 
-# Day 4. Web Foundations: HTML, CSS, Bootstrap & Web Design<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+# Day 4. Web Foundations: HTML, CSS, Bootstrap & Web Design
 {: .no_toc }
 
 Welcome to Day 4! Today, you’ll build a solid foundation in web development by learning how the internet works, the essentials of HTML and CSS, and how to use Bootstrap for rapid, beautiful web design. We’ll also cover the basics of web design theory to help you create websites people will love.
@@ -207,6 +207,7 @@ The <div> HTML element is a generic container for flow content. It's a "division
 
 This can be visualised in [W3Schools html web testing](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic)
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -595,6 +596,7 @@ This can be visualised in [W3Schools html web testing](https://www.w3schools.com
 </body>
 </html>
 ```
+{% endraw %}
 
 </details>
 
@@ -604,6 +606,7 @@ This can be visualised in [W3Schools html web testing](https://www.w3schools.com
   </summary>
 You can use F12 or right click inspect to see the html code for each element.
 
+{% raw %}
 ```
 <html lang="en">
 <head>
@@ -991,6 +994,7 @@ You can use F12 or right click inspect to see the html code for each element.
 </body>
 </html>
 ```
+{% endraw %}
 
 </details>
 
@@ -1741,6 +1745,7 @@ You can visualise this code in [W3Schools html web testing](https://www.w3school
     Bootstrap template Rendered
   </summary>
 
+```
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -2070,8 +2075,50 @@ You can visualise this code in [W3Schools html web testing](https://www.w3school
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+```
 
 </details>
+
+
+### Markdown, Jekyll and Ruby<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+
+#### What is Markdown?
+
+Markdown is a lightweight markup language for formatting text using plain text syntax. It's designed to be easy to read and write, and is widely used for documentation, README files, and static site generators.
+
+**Basic Markdown Syntax:**
+- Headings: `# Heading 1`, `## Heading 2`, ..., up to `###### Heading 6`
+- Bold: `**bold text**` or `__bold text__`
+- Italic: `*italic text*` or `_italic text_`
+- Lists:  
+  - Unordered: `- item` or `* item`
+  - Ordered: `1. item`
+- Links: `[link text](https://example.com)`
+- Images: `![alt text](image-url)`
+- Code:  
+  - Inline: `` `code` ``
+  - Block:  
+    ```
+    code block
+    ```
+- Blockquote: `> quoted text`
+
+**Differences with HTML:**
+- Markdown is simpler and more readable in raw form.
+- HTML is more powerful and flexible, but more verbose.
+- Markdown can be converted to HTML, but not all HTML features are available in Markdown.
+
+For a full reference, see [Markdown Guide](https://www.markdownguide.org/basic-syntax/).
+
+#### Jekyll and Ruby
+
+[Jekyll](https://jekyllrb.com/) is a static site generator that converts Markdown files into HTML websites. It is the engine behind GitHub Pages, allowing you to publish documentation or blogs directly from a GitHub repository for free. Jekyll is written in the Ruby programming language.
+
+#### This Website
+
+This website is built using the [just-the-docs](https://just-the-docs.github.io/) theme, which is a Jekyll-based theme designed for documentation sites.
+
+
 
 
 ---
@@ -2080,31 +2127,116 @@ You can visualise this code in [W3Schools html web testing](https://www.w3school
 
 ### Introduction to Web Design<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-Web design is about more than code—it’s about creating a great experience.
+Web design is about more than just writing clean code—it’s about crafting a visual and emotional experience that speaks to your users. A successful design invites people in, tells a story, and guides them effortlessly toward a goal. In this guide, we explore the four pillars of effective web design: **Color Theory, Typography, User Interface (UI), and User Experience (UX)**. Once you've mastered these, you'll be equipped to create beautiful, human-centered websites.
 
-#### Understanding Color Theory<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+---
 
-- Use a consistent color palette.
-- Use contrast for readability.
-- Tools: [Coolors](https://coolors.co/), [Adobe Color](https://color.adobe.com/)
+### 🎨 Understanding Color Theory<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-#### Understanding Typography<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+Color isn't just decoration—it conveys meaning, influences mood, and can even affect behavior. Here are key principles:
 
-- Choose readable fonts.
-- Limit the number of font families.
-- Use font size and weight for hierarchy.
+- **Consistency is key**: Avoid clashing colors. Instead, choose palettes that align with your brand and message.
+- **Tell a story with color**:
+  - 🔴**Red**: passion, energy, urgency—great for action-driven brands.
+> *Example:* <a href="https://www.coca-cola.com/" target="_blank">Coca-Cola</a>
+<img src="cocacola.png" alt="cocacola thumbnail" width="50%" style="display: block; margin: auto;">
+> *Why it works:* Coca-Cola’s brand is all about excitement, fun, and refreshment. The bold red color sparks energy and urgency, making it feel dynamic and iconic.
+  - 🟡**Yellow**: optimism, intellect, attention—effective for grabbing interest but avoid using it for large backgrounds.
+> *Example:* <a href="https://www.mcdonalds.com/" target="_blank">McDonald’s</a>
+<img src="mcdonalds.png" alt="mcdonalds thumbnail" width="50%" style="display: block; margin: auto;">  
+> *Why it works:* McDonald's uses yellow to grab attention and convey a sense of happiness and friendliness. It’s especially effective in logos and accents, not overwhelming the background.
+  - 🟢 **Green**: freshness, safety—ideal for eco or food-related businesses.
+> *Example:* <a href="https://www.wholefoodsmarket.com/" target="_blank">Whole Foods Market</a> 
+<img src="wholefoods.png" alt="wholefoods thumbnail" width="50%" style="display: block; margin: auto;">  
+> *Why it works:* Whole Foods emphasizes health, nature, and sustainability. Green reinforces their commitment to fresh, organic food and environmentally conscious practices.
+  - 🔵 **Blue**: trust, calm—popular with finance and tech firms.
+> *Example:* <a href="https://www.paypal.com/" target="_blank">PayPal</a>   
+<img src="paypal.png" alt="paypal thumbnail" width="50%" style="display: block; margin: auto;"> 
+> *Why it works:* Blue is the dominant color in PayPal’s design, evoking trust, security, and professionalism—critical for a financial service provider. 
+  - 🟣 **Purple**: royalty, femininity—often used in luxury and beauty products.
+> *Example:* <a href="https://www.cadbury.co.uk/" target="_blank">Cadbury</a>  
+<img src="cadbury.png" alt="cadbury thumbnail" width="50%" style="display: block; margin: auto;">  
+> *Why it works:* Cadbury uses a rich purple to reflect luxury and indulgence. The color also helps distinguish its products and adds a sense of premium quality.
 
-#### Managing Attention with UI Design<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+- **Use scientific palettes**:
+  - **Analogous**: harmonious, side-by-side colors on the color wheel.
+  <img src="analogous-wheel.jpg" alt="analogous palettes" width="30%" style="display: block; margin: auto;">  
+  - **Complementary**: opposite on the wheel—eye-catching, but best for accents, not text.
+  <img src="complimentary-wheel.jpg" alt="complimentary palettes" width="30%" style="display: block; margin: auto;">   
+  - **Triadic and Square palettes**: well-balanced and vibrant.
+    <div style="display: flex; justify-content: center; gap: 20px;">
+      <img src="triangular-wheel.jpg" alt="triangular palettes" width="30%">
+      <img src="rectangular-wheel.jpg" alt="rectangular palettes" width="30%">
+    </div>
 
-- Use whitespace to separate content.
-- Highlight important actions (buttons, links).
-- Guide the user’s eye with layout and color.
 
-#### User Experience (UX) Design<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-- Make navigation intuitive.
-- Ensure your site is responsive (works on all devices).
-- Test with real users and iterate.
+- **Use professional tools**:
+  - <a href="https://color.adobe.com/" target="_blank">Adobe Color</a>: for creating colour themes and transfer into content
+  - <a href="https://coolors.co/" target="_blank">Coolors</a>: preset colour palets
+  - <a href="https://colorhunt.co" target="_blank">Color Hunt</a>: preset colour palets
+
+Choose color combinations that reflect your website’s purpose. A good palette makes your design feel intentional, coherent, and memorable.
+
+---
+
+### ✍️ Understanding Typography<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+
+Typography guides the reader’s journey. Great typography brings clarity and mood to your content.
+
+- **Choose readable fonts**: Prioritize legibility across all screen sizes.
+- **Limit to 2–3 font families**: Too many can overwhelm and distract. 
+  - <strong>Serif fonts</strong> (like <span style="font-family: 'Georgia', serif;">Georgia</span> or <span style="font-family: 'Times New Roman', serif;">Times New Roman</span>) have small decorative strokes, or "feet," at the ends of their letterforms, giving them a traditional and elegant feel often used in print.<br>
+  - <strong>Sans-serif fonts</strong> (like Arial) lack these decorative strokes, offering a clean, modern, and minimalist look that is highly legible, especially on digital screens.<br>
+  - The choice between them often depends on the medium (print vs. digital) and the desired mood (classic vs. modern).
+- **Establish hierarchy**:
+  - Use size, weight (bold vs. regular), and spacing to indicate importance.
+  - Pair serif fonts (<span style="font-family: 'Georgia', serif;">classic, established</span>) with sans-serif (modern, clean) for contrast.
+- **Consider your brand tone**: A <span style="font-family: 'Times New Roman', serif;">serif font</span> conveys tradition, while a bold sans-serif feels tech-forward. Use script for more <span style="font-family: 'Dancing Script', cursive;">personal</span> or <span style="font-family: 'Great Vibes', cursive;">elegant</span>. 
+
+Design is communication—your font choices should help users absorb your message, not fight against it.
+
+---
+
+### 👁️ Managing Attention with UI Design<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+
+Your users don’t read—they scan. UI design is about guiding their attention where it matters most.
+
+#### ✅ Hierarchy
+- Bigger and bolder elements get noticed first.
+- Use **color contrast** and **<span style="font-size: larger;">size</span>** to show what matters—like a green "Buy Now" button on a grayscale layout.
+
+#### 🧱 Layout
+- Break up text blocks with images and whitespace.
+- Ideal line length: **40–60 characters** for easy reading.
+- Avoid overwhelming walls of text like those found on Wikipedia.
+
+#### 📐 Alignment
+- Align elements to create structure.
+- Reduce the number of alignment points—uniformity makes your layout feel more professional.
+
+#### 🌌 White Space
+- Emptiness adds elegance. High-end designs (think Apple) use white space to suggest value and clarity.
+- Don’t cram your content—let each element breathe.
+
+#### 🧑‍🎨 Design for Your Audience
+- A kids’ website should look different from a fintech site.
+- Match color, layout, and font to your user’s expectations and desires.
+
+When UI is done right, users won’t even notice it—they’ll just glide through your site happily.
+
+---
+
+### 💡 User Experience (UX) Design<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+
+UX is about **empathy**—designing with your user’s journey in mind. Ask yourself: Can users find what they need easily? Can they interact comfortably on all devices?
+
+- **Make navigation intuitive**: Use familiar patterns like top navbars or hamburger menus.
+- **Responsive design**: Your website should look great on phones, tablets, and desktops.
+- **Test early and often**: Get feedback from real users. Watch how they interact, and iterate based on their behavior—not your assumptions.
+
+Think of UX as invisible scaffolding—it’s not glamorous, but it holds your entire design together
+
 
 ---
 
@@ -2117,5 +2249,4 @@ Today you learned:
 - How to use Bootstrap for fast, responsive design
 - Key web design principles for beautiful, user-friendly sites
 
-**Next Steps:** Try building a simple web page using HTML, style it with CSS, and experiment with Bootstrap components!
-
+**Next Steps:** Try building a simple web page using HTML, style it with CSS, and experiment with Bootstrap components! You can speed up your design by using <a href="https://www.canva.com/" target="_blank">Canva</a> which alows you to design a website in your browser, publish it and then you can see its code. 
