@@ -3,7 +3,7 @@ import requests
 base_url = "http://api.openweathermap.org/data/2.5/weather"
 params = {
     "q": "London",
-    "appid": "24a16cc554ff1dd57f5586f849772f01",
+    "appid": "***",
     "units": "metric"  # You can change to "imperial" for Fahrenheit
 }
 
