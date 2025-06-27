@@ -540,10 +540,7 @@ The `if __name__ == "__main__":` check ensures the `main()` function only runs w
 
 In flow diagrams:
 - Rectangles with square or rounded corners mean a step in the process. They represent a step in the process, an operation, or a task. This is where something is done.For example: "Perform Calculation," "Print Report," "Read Data".
-```mermaid
-graph TD;
-    A(Rectangle);
-```
+```mermaid graph TD A(Rectangle)```
 - Diamonds are for decisions (or if, then else): They indicates a point where a decision must be made, typically a "Yes/No" or "True/False" question. The paths diverging from the diamond are labeled with the possible answers.
 ```mermaid
 graph TD;
