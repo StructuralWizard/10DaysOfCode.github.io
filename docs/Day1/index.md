@@ -4,6 +4,11 @@ layout: default
 nav_order: 2
 ---
 
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 # Day 1. Understand your code. Python Adventure: 🧟‍♂️ Monster Maze 
 {: .no_toc }
 Feeling a bit lost when your **Vibe Coders** agents spit out lines of python code? You're not alone! Many aspiring developers find themselves staring at unfamiliar syntax, wondering how to interpret the logic behind their agents' creations. This crash lesson is designed to **banish that confusion**. We'll dive into the absolute essentials of Python – its fundamental data types, common operations, and basic control flow – equipping you with the knowledge to confidently read and understand the code your agents generate. Stop feeling sidelined and start truly collaborating with your AI; **unlock the power of understanding** the code, not just generating it!

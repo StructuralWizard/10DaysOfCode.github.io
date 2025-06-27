@@ -6,7 +6,7 @@ has_children: false
 nav_exclude: false
 ---
 
-# Day 4. Web Foundations: HTML, CSS, Bootstrap & Web Design
+# Day 4. Web Foundations. 🕸️ HTML, CSS, Bootstrap & Web Design
 {: .no_toc }
 
 Welcome to Day 4! Today, you’ll build a solid foundation in web development by learning how the internet works, the essentials of HTML and CSS, and how to use Bootstrap for rapid, beautiful web design. We’ll also cover the basics of web design theory to help you create websites people will love.
@@ -1321,11 +1321,13 @@ div {
 }
 ```
 
+
+
 ---
 
 ## 🚀 Introduction to JavaScript<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-JavaScript is the programming language that brings web pages to life. While HTML provides the structure and CSS handles the appearance, JavaScript enables interactivity, dynamic content, and logic on the client side (in the browser).
+JavaScript is the programming language that brings web pages to life. While HTML provides the structure and CSS handles the appearance, JavaScript enables interactivity, dynamic content, and logic on the client side (in the browser). Javascript has an extensive and complex list of commands, modules and frameworks that are not explained here. Javascript may be used both for Frontend and Backend. We will only cover some basics here to be able to identify it when inspecting websites. 
 
 ### What Can JavaScript Do?<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 - Respond to user actions (clicks, typing, mouse movement)
