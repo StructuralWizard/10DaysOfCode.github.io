@@ -19,10 +19,10 @@ We will also discover an amazing free resource provided by Google: <a href="http
 ---
 
 <details open markdown="block">
-  <summary>
-    Table of Contents
-  </summary>
-  {: .text-delta }
+<summary>
+Table of contents
+</summary>
+{: .text-delta }
 1. TOC
 {:toc}
 </details>
@@ -121,7 +121,7 @@ print(f"Dataset shape: {df_products.shape}")
 ```
 
 **Expected Output:**
-```
+```bash
 Product data loaded successfully!
 ```
 
@@ -143,7 +143,7 @@ df_products.info()
 ```
 
 **Expected Output:**
-```
+```bash
 First 5 rows of the product data:
    product_id product_name   price launch_date
 0         101     Gadget A  199.99  2023-01-15
@@ -192,7 +192,7 @@ print(f"Duplicates after cleaning: {df_products.duplicated().sum()}")
 ```
 
 **Expected Output:**
-```
+```bash
 Number of duplicate rows: 1
 Number of duplicates after cleaning: 0
 ```
@@ -215,7 +215,7 @@ print(df_products.isna().sum())
 ```
 
 **Expected Output:**
-```
+```bash
 Missing values per column:
 product_id      0
 product_name    0
@@ -253,7 +253,7 @@ print(df_products.dtypes)
 ```
 
 **Expected Output:**
-```
+```bash
 Data types before conversion:
 product_id               int64
 product_name            object
@@ -289,7 +289,7 @@ display(avg_price_by_month)
 ```
 
 **Expected Output:**
-```
+```bash
 Average product price by launch month:
   launch_month       price
 0        April  162.265000
@@ -324,7 +324,7 @@ print(sqrt_array.round(2))
 ```
 
 **Expected Output:**
-```
+```bash
 Original NumPy Array:
 [[67.23 45.12 78.91 23.45]
  [89.34 12.67 56.78 91.23]
@@ -452,7 +452,7 @@ The Viridis color scale provides excellent visibility and is colorblind-friendly
 
 ![Plotly Geographic Scatter](plotly_geographic_scatter.png)
 *Interactive geographic visualization of California housing data (static version shown)*
-```
+
 
 **Plotly Features:**
 - **Hover tooltips**: Show additional information on mouse over
@@ -487,7 +487,7 @@ else:
 ```
 
 **Expected Output:**
-```
+```bash
 T-statistic: 5.5018
 P-value: 0.0000
 
@@ -522,7 +522,7 @@ print(f"Testing set size: {X_test.shape[0]} samples")
 ```
 
 **Expected Output:**
-```
+```bash
 Training set size: 16512 samples
 Testing set size: 4128 samples
 ```
@@ -550,7 +550,7 @@ display(coefficients)
 ```
 
 **Expected Output:**
-```
+```bash
 Model R-squared score: 0.5099
 This model explains 51.0% of the variance in house prices
 
@@ -589,27 +589,9 @@ This dashboard shows:
 
 Here's the complete data science workflow we've covered:
 
-```mermaid
-graph TD
-    A[📁 Data Loading] --> B[🔍 Data Exploration]
-    B --> C[🧹 Data Cleaning]
-    C --> D[🔄 Feature Engineering]
-    D --> E[📊 Data Visualization]
-    E --> F[📈 Statistical Analysis]
-    F --> G[🤖 Machine Learning]
-    G --> H[📋 Model Evaluation]
-    H --> I[🚀 Deployment/Insights]
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-    style E fill:#fce4ec
-    style F fill:#f1f8e9
-    style G fill:#e0f2f1
-    style H fill:#fff8e1
-    style I fill:#e8eaf6
-```
+
+![Complete flow](complete_flow_mermaid.png)
+
 
 ### 🎯 6.10.1. Key Takeaways
 

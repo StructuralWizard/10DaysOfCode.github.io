@@ -45,11 +45,8 @@ pip install pandas matplotlib
 ### 👉 Understanding File Structure 📁 and Paths in Python<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 A **file structure** (also known as a **directory structure**) refers to how files and folders are organized on your computer. It's like a tree:
-
 - At the top is the **root** (e.g., C:\ in Windows or / in Unix/Linux).
-
 - Inside it are **folders/directories** (e.g., Documents, Desktop, etc.)
-
 - Folders can contain **files** (like .txt, .csv, .py) or **other folders** (subdirectories).
 
 ### 👉 We need file structures to **organize data, locate files,** and **build scalable applications**.<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
@@ -183,33 +180,23 @@ Let's continue with the "Vehicle Factory" analogy:
 ### 👉 **Why** is OOP Useful and When?<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 OOP is useful for:
-
 - *Organization and Modularity*: It helps you break down complex problems into smaller, manageable pieces (objects). This makes your code easier to understand, maintain, and debug. Instead of one giant instruction manual for everything, you have separate blueprints for cars, motorcycles, etc.
-
 - *Reusability*: You can reuse your blueprints (classes) to create many similar objects. You don't need to redraw the car blueprint every time you want to build a new car. You just use the existing one.
-
 - *Flexibility and Maintainability*: If you need to change how all cars accelerate, you just modify the "Car Blueprint." All cars built from that blueprint will then have the updated acceleration behavior. If you decide all cars should now have self-driving capabilities, you update the Car Blueprint, and all new cars you build from it will have that feature.
-
 - *Handling Complexity*: As your programs grow, OOP helps manage the complexity by encapsulating related data and behavior together.
 
 ### 👉 **When** is it useful?<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 OOP shines when you're dealing with:
-
 - *Complex systems*: Games, simulations, large business applications.
-
 - *Programs with many similar "things"*: Think of a user management system (many "user" objects), an e-commerce site (many "product" objects), or a graphical user interface (many "button," "text field," "window" objects).
-
 - *When you want to collaborate on code*: Different developers can work on different parts of the system (different classes) more easily.
 
 ### 👉 What are **Methods**, and **Attributes**?<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 Let's go back to our vehicle analogy:
-
 - *Objects*: As explained, these are the actual "things" created from a blueprint (class). For example, my_red_car, johns_motorcycle.
-
 - *Attributes* (Properties/Data): These are the characteristics or data associated with an object. They are like the details on the blueprint that describe what the vehicle is.For a Car object, attributes might be color (e.g., "red"), number_of_wheels (e.g., 4), brand (e.g., "Toyota").
-
 - *Methods* (Behaviors/Functions): These are the actions an object can perform. They are like the instructions on the blueprint that describe what the vehicle can do. For a Car object, methods might be accelerate(), brake(), turn_on_headlights().
 
 How do you create an object out of a class in Python?
@@ -480,7 +467,7 @@ def summarize_data(df_workouts, df_meals):
 
 ## 📈 **Step 5**: Visualize with **matplotlib**<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-The last function that we are going to write is the one that creates the plot of the workout, meal and net calories for every registered day. To do this, we simply load the matplotlib library
+The last function that we are going to write is the one that creates the plot of the workout, meal and net calories for every registered day. To do this, we simply load the matplotlib library and create a plot assembling each part as shown in the code below. 
 
 ```python
 import matplotlib.pyplot as plt
@@ -529,6 +516,10 @@ def plot_fitness_trends(combined_df):
     plt.show() # Display the completed chart
 ```
 
+The resulting chart with the Consumed and Burned calories as well as the Net ones looks like:
+
+![Consumed and Burned Calories history](Matplotlib_calories_figure.png)
+
 ## ▶️ **Step 6**: Main Program<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 Following best practices, we have left the main function to specify the flow of the program. This make it easier to review and to update the code. 
@@ -547,11 +538,7 @@ if __name__ == "__main__":
 
 ## 🧪 Practice Challenges<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 Try modifying or extending the project:
-
 - Add weight tracking.
-
 - Categorize meal types (e.g., “High Protein”).
-
 - Export results to a new CSV file.
-
 - Highlight days with a calorie surplus.

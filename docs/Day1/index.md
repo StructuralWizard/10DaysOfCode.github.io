@@ -16,10 +16,10 @@ Feeling a bit lost when your **Vibe Coders** agents spit out lines of python cod
 ---
 
 <details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
+<summary>
+Table of contents
+</summary>
+{: .text-delta }
 1. TOC
 {:toc}
 </details>
@@ -540,63 +540,28 @@ The `if __name__ == "__main__":` check ensures the `main()` function only runs w
 
 In flow diagrams:
 - Rectangles with square or rounded corners mean a step in the process. They represent a step in the process, an operation, or a task. This is where something is done.For example: "Perform Calculation," "Print Report," "Read Data".
-```mermaid
-graph TD;
-    A(Rectangle);
-```
+
+![Rectangle](Rectangle.png)
+
 - Diamonds are for decisions (or if, then else): They indicates a point where a decision must be made, typically a "Yes/No" or "True/False" question. The paths diverging from the diamond are labeled with the possible answers.
-```mermaid
-graph TD;
-    A{Diamond};
-```
+
+![Diammond](Diamond.png)
+
 - Ovals/Capsules (Start/End - Terminal):Represent the beginning or end of a process.
-```mermaid
-graph TD;
-    A((Circle));
-```
+
+![Circle](Circle.png)
+
 - Cylinders: Represent data stored in a database or other storage medium.
-```mermaid
-graph TD;
-    A[(Database)];
-```
+
+![Database](Database.png)
+
 - Arrows: Connect the symbols and indicates the direction of flow or the sequence of operations.<br/>
 **→**
 
 
 For Monster Maze, the flow chart looks like:
 
-```mermaid
-graph TD;
-    accTitle: monster maze
-    accDescr: flowchart of the monster maze game
-    A((Start)) --> B("print_welcome()");
-    B --> C("main()");
-    C --> D[Enter player name];
-    D --> E("create_player(name)");
-    E --> F("game_loop(player)");
-    F --> G{"found_key?"};
-    G -- Yes --> H["Congratulations! You escaped!"];
-    G -- No --> I("describe_room(player['location'])");
-    I --> J{"item found?"};
-    J -- Yes --> K["Add item to inventory"];
-    J -- No --> L["Continue"];
-    K --> L;
-    L --> M("encounter_monster(player)");
-    M --> N{"Player health <= 0?"};
-    N -- Yes --> O["You have died. Game Over."];
-    N -- No --> P("check_for_key(player)");
-    P --> Q{"Key found?"};
-    Q -- Yes --> R["Add magic key to inventory"];
-    Q -- No --> S["Continue"];
-    R --> S;
-    S --> T{"Loop: Move to another room?"};
-    T -- No --> V["You chose to rest. Game Over."];
-    T -- Yes --> U["move_to_new_room(player)"];
-    U --> F;
-    V --> W(("End"));
-    O --> W;
-    H --> W;
-```
+![Full Flowchart](Full_flowchart.png)
 
 ### 🐛 1.3.10. Debugging <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
@@ -675,7 +640,58 @@ As a final step, thorough testing ensures your code works as expected across dif
 
 ---
 
-## 🎯 1.4. Exercises <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 📝 1.4 Reflection Questions <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+
+<details markdown="block">
+  <summary>
+1. What happens if a function doesn't `return` anything?
+  </summary>
+It will return `None`
+</details>
+
+<details markdown="block">
+  <summary>
+2. How do global and local variables differ in the game?
+  </summary>
+A global variable in the game is `found_key`, which is accessible and can be modified from any function within the program. In contrast, local variables are defined within a specific function, such as `player` in the `game_loop` function or `item` in `describe_room`, and their scope is limited to that function. This means they can only be used and modified within the function where they are defined.
+</details>
+
+<details markdown="block">
+  <summary>
+3. What type of loop would you use for repeating until a condition is met?
+   </summary>
+For repeating until a condition is met, a `while` loop would be suitable, as it continues to execute as long as a specified condition is true. 
+</details> 
+
+<details markdown="block">
+  <summary> 
+4. And for looping through a list of rooms?
+  </summary>
+For looping through a list of rooms, a `for` loop would be appropriate, as it iterates over each item in a sequence.
+</details>
+
+<details markdown="block">
+  <summary>
+5. What are some ways to avoid getting stuck in an infinite loop?
+  </summary>
+To avoid getting stuck in an infinite loop:
+
+- Ensure the loop condition eventually becomes false: For `while` loops, make sure that the condition controlling the loop will at some point evaluate to `False`.
+- Include a breaking condition: Use `break` statements to exit the loop when a certain condition is met.
+- Limit iterations: For loops that might run indefinitely, consider adding a counter and breaking the loop after a maximum number of iterations.
+</details>
+
+<details markdown="block">
+  <summary>
+6. Can you break the game by entering unexpected input?
+  </summary>
+Yes, you can break the game by entering unexpected input. The `game_loop` function includes an `input` prompt that expects "yes" or "no" (or "y" or "n"). If any other input is entered, the program will repeatedly print "Please answer yes or no." due to the `while` True loop and the `else` condition, effectively getting stuck in a loop asking for valid input until "yes" or "no" is entered. This prevents the game from progressing to the next room or ending, and while not an infinite loop in the sense of crashing the program, it does halt the game's intended flow until valid input is provided.
+</details>
+
+---
+
+
+## 🎯 1.5. Exercises <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 #### 🧪 Practice 1: Custom Weapons
 > Modify the `ITEMS` list to include new weapons like "laser", "bow", or "fireball". Have the monster encounter logic recognize them.
@@ -689,17 +705,6 @@ As a final step, thorough testing ensures your code works as expected across dif
 #### 🧪 Practice 4: Add a Map
 > Track which rooms you've visited. Print a mini-map or list at the end showing where you’ve been.
 
----
-
-## 📝 1.5 Reflection Questions <a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
-
-1. What happens if a function doesn't `return` anything?
-2. How do global and local variables differ in the game?
-3. What type of loop would you use for:
-   - Repeating until a condition is met?  
-   - Looping through a list of rooms?
-4. What are some ways to avoid getting stuck in an infinite loop?
-5. Can you break the game by entering unexpected input?
 
 
 ---

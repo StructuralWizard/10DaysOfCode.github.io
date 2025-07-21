@@ -19,6 +19,12 @@ vendor/
 # Ignore folders for mermaid diagrams
 assets/
 
+# Ignore template folder
+docs/Day0/
+
+# Ignore any slides folders
+slides/
+
 # Environment files
 .venv
 .env
