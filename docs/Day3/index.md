@@ -13,10 +13,10 @@ nav_exclude: false
 ---
 
 <details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
+<summary>
+Table of contents
+</summary>
+{: .text-delta }
 1. TOC
 {:toc}
 </details>
@@ -25,12 +25,12 @@ nav_exclude: false
 
 ## 📚 Concepts Covered<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-### What is an API?<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+What is an API?
 - **API (Application Programming Interface)** is a set of rules that allows different software entities (like your Python script and a webapp) to communicate.
 - **Client**: The application that sends requests (e.g., your Python script).
 - **Server**: The application that responds to requests (e.g., the API endpoint).
 
-### HTTP Requests<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+How to use APIs?
 The typical HTTP requests that clients send to servers are:
 - **GET** – Retrieve data
 - **POST** – Submit new data
@@ -102,7 +102,6 @@ HTTP responses are categorized by status codes, which are 3-digit numbers groupe
 
 
 In addition to the status code, an HTTP response also includes:
-
 1. **Status-line**: Contains the HTTP version, the numeric status code, and a textual reason phrase (e.g., HTTP/1.1 200 OK).
 1. **Headers**: Provide additional information about the response, such as content type, caching instructions, server information, etc.
 1. **Message-body** (optional): Contains the actual data being returned, such as an **HTML** page, **JSON** data, an **image**, etc.
@@ -330,6 +329,9 @@ class NameForm(FlaskForm):
     name = StringField('Your Name', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
+```
+```python
+
 # Route to display and handle form
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -448,11 +450,11 @@ export API_KEY=my-super-secret-api-key-123
 
 | Benefit                     | Why It Matters                                                        |
 | --------------------------- | --------------------------------------------------------------------- |
-| 🔒 **Security**             | Keeps secrets out of source code (e.g. GitHub repo)                   |
-| 🔄 **Configurability**      | You can change keys or settings **without changing code**             |
-| 🧪 **Environment-Specific** | Different values for dev, staging, production                         |
-| 🔁 **Reusability**          | Same codebase, different configs based on environment                 |
-| ☁️ **Cloud-Friendly**       | All major cloud platforms support secret management via env variables |
+| **Security**             | Keeps secrets out of source code (e.g. GitHub repo)                   |
+| **Configurability**      | You can change keys or settings **without changing code**             |
+| **Environment-Specific** | Different values for dev, staging, production                         |
+| **Reusability**          | Same codebase, different configs based on environment                 |
+| **Cloud-Friendly**       | All major cloud platforms support secret management via env variables |
 
 For local dev, you can store secrets in a .env file:
 `.env`
@@ -544,7 +546,6 @@ exercise_config = {"query": input("What exercises did you do (you can include du
 
 exercise_response = requests.post(NUTRITIONIX_NLP_EXERCISE_URL_ENDPOINT, headers=headers, json=exercise_config)
 
- 
 user_input = exercise_response.json()["exercises"][0]["user_input"]
 duration = exercise_response.json()["exercises"][0]["duration_min"]
 calories = exercise_response.json()["exercises"][0]["nf_calories"]
@@ -612,6 +613,7 @@ workout_data = {
       "calories": calories,
     }
   }
+
 
 # Add new row to the spreadsheet with inputted data
 #print(headers)
@@ -763,7 +765,7 @@ message = client.messages.create(
     #content_variables='{"1":"409173"}',    
     content_sid='HX38f4a38e390bfec8bfe8760c5d013619', # APPL closing price: ${{1}}
     content_variables=f'{{"1":"{price}"}}',
-    to='whatsapp:+447818912097'
+    to='whatsapp:+44YOUR TELEPHONE NUMBER GOES HERE'
 )
 
 print(message.sid)

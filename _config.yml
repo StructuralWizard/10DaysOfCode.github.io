@@ -59,3 +59,25 @@ callouts:
   warning:
     title: Warning
     color: red
+
+# Exclude files from processing
+exclude:
+  - "**/*.xlsm"
+  - "**/*.xlsx"
+  - "**/*.xls"
+  - "**/*.pdf"
+  - "**/*.doc"
+  - "**/*.docx"
+  - "**/*.pptx"
+  - "**/*.ppt"
+  - "**/slides/*.xlsm"
+  - "**/slides/*.xlsx"
+  - "**/slides/*.xls"
+  - "**/slides/*.pdf"
+  - "**/slides/*.doc"
+  - "**/slides/*.docx"
+  - "**/slides/*.pptx"
+  - "**/slides/*.ppt"
+  - "docs/Day1/slides/alignme.xlsm"
+  - node_modules/
+  - vendor/
