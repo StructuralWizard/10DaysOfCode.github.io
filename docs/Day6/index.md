@@ -1,5 +1,5 @@
 ---
-title: Day 6. Python Data Science Essentials - Comprehensive Analysis
+title: Day 6 Python Data Science Essentials - Comprehensive Analysis
 layout: default
 nav_order: 7
 ---
