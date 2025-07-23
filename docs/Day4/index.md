@@ -606,7 +606,7 @@ This can be visualised in [W3Schools html web testing](https://www.w3schools.com
   </summary>
 You can use F12 or right click inspect to see the html code for each element.
 
-{% raw %}
+
 ```
 <html lang="en">
 <head>
@@ -994,7 +994,7 @@ You can use F12 or right click inspect to see the html code for each element.
 </body>
 </html>
 ```
-{% endraw %}
+
 
 </details>
 
