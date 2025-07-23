@@ -58,7 +58,7 @@ To activate the virtual environment:
   ```bash
   .\venv\Scripts\activate
   ```
-- On macOS/Linux:
+- On macOS/Linux/bash terminal:
   ```bash
   source venv/bin/activate
   ```

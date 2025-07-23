@@ -357,7 +357,7 @@ This can be visualised in [W3Schools html web testing](https://www.w3schools.com
                 <h2 class="text-3xl font-semibold text-gray-800 mb-4 pb-2 border-b-2 border-blue-300 rounded-lg">Tables</h2>
                 <p class="mb-4">Tables (`&lt;table&gt;`) are used to display tabular data.</p>
                 <table class="w-full border-collapse text-left rounded-lg overflow-hidden shadow-md">
-                    <thead class="bg-blue-600 text-white">
+                    <thead class="bg-blue-600">
                         <tr>
                             <th class="py-3 px-4 border-b border-blue-700">Name</th>
                             <th class="py-3 px-4 border-b border-blue-700">Age</th>
@@ -755,7 +755,7 @@ You can use F12 or right click inspect to see the html code for each element.
                 <h2 class="text-3xl font-semibold text-gray-800 mb-4 pb-2 border-b-2 border-blue-300 rounded-lg">Tables</h2>
                 <p class="mb-4">Tables (`&lt;table&gt;`) are used to display tabular data.</p>
                 <table class="w-full border-collapse text-left rounded-lg overflow-hidden shadow-md">
-                    <thead class="bg-blue-600 text-white">
+                    <thead class="bg-blue-600">
                         <tr>
                             <th class="py-3 px-4 border-b border-blue-700">Name</th>
                             <th class="py-3 px-4 border-b border-blue-700">Age</th>
@@ -2082,9 +2082,9 @@ You can visualise this code in [W3Schools html web testing](https://www.w3school
 </details>
 
 
-### Markdown, Jekyll and Ruby<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 📝Markdown, 👻Jekyll and 💎Ruby<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
-#### What is Markdown?
+### What is Markdown?
 
 Markdown is a lightweight markup language for formatting text using plain text syntax. It's designed to be easy to read and write, and is widely used for documentation, README files, and static site generators.
 
@@ -2112,15 +2112,13 @@ Markdown is a lightweight markup language for formatting text using plain text s
 
 For a full reference, see [Markdown Guide](https://www.markdownguide.org/basic-syntax/).
 
-#### Jekyll and Ruby
+### Jekyll and Ruby
 
 [Jekyll](https://jekyllrb.com/) is a static site generator that converts Markdown files into HTML websites. It is the engine behind GitHub Pages, allowing you to publish documentation or blogs directly from a GitHub repository for free. Jekyll is written in the Ruby programming language.
 
-#### This Website
+### This Website
 
 This website is built using the [just-the-docs](https://just-the-docs.github.io/) theme, which is a Jekyll-based theme designed for documentation sites.
-
-
 
 
 ---
