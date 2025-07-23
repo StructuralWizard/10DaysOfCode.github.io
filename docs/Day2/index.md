@@ -54,8 +54,8 @@ A **file structure** (also known as a **directory structure**) refers to how fil
 A file path is the address to a file or folder in the computer. There are two types:
 1. Absolute Path that Points to the exact location from the root and always starts from the drive or root directory.
 ```python
-"C:/Users/Alberto/Desktop/my_file.txt"  # Windows
-"/home/alberto/documents/my_file.txt"   # Linux/macOS
+"C:/Users/structuralwizard/Desktop/my_file.txt"  # Windows
+"/home/structuralwizard/documents/my_file.txt"   # Linux/macOS
 ```
 1. Relative Path that points to a location relative to the current working directory.
 ```python
