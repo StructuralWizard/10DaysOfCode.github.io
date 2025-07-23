@@ -2082,7 +2082,7 @@ You can visualise this code in [W3Schools html web testing](https://www.w3school
 </details>
 
 
-## Markdown, Jekyll and Ruby<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
+## 📝Markdown, 👻Jekyll and 💎Ruby<a href="#top" class="back-to-top-link" aria-label="Back to Top">↑</a>
 
 ### What is Markdown?
 
